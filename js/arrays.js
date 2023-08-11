@@ -6,6 +6,7 @@ const campoDepartamentoTarefa = document.getElementById('taskDepartment');
 const campoImportanciaTarefa = document.getElementById('taskImportance');
 const listaTarefas = document.getElementById('listaTarefas');
 
+// Array para armazenar tarefas
 const tarefas = [];
 
 // Adiciona uma nova tarefa ao array de tarefas
@@ -28,9 +29,15 @@ function removerTarefa(indice) {
     atualizarTarefas();
 }
 
+// Alterna o status de "realizada" de uma tarefa
+function alternarRealizado(indice, feito) {
+    tarefas[indice].realizada = feito;
+}
+
 // Atualiza a duração de uma tarefa
 function atualizarDuracao(indice, duracao) {
     tarefas[indice].duracao = parseInt(duracao);
+}
 
 // Atualiza a exibição das tarefas na página
 function atualizarTarefas() {
@@ -59,6 +66,28 @@ function atualizarTarefas() {
         </table>
     `;
 }
+
+// Função para adicionar uma tarefa com os atributos preenchidos
+function adicionarTarefaComAtributos() {
+    const descricao = campoDescricaoTarefa.value;
+    const autor = campoAutorTarefa.value;
+    const departamento = campoDepartamentoTarefa.value;
+    const importancia = campoImportanciaTarefa.value;
+    
+    if (descricao && autor && departamento && importancia) {
+        adicionarTarefa(descricao, autor, departamento, importancia);
+        campoDescricaoTarefa.value = '';
+        campoAutorTarefa.value = '';
+        campoDepartamentoTarefa.value = '';
+        campoImportanciaTarefa.value = '';
+    }
+}
+
+// Adiciona um evento para o formulário ao submeter
+formularioTarefa.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+    adicionarTarefaComAtributos();
+});
 
 // Inicializa a exibição das tarefas
 atualizarTarefas();
