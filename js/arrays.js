@@ -32,4 +32,33 @@ function removerTarefa(indice) {
 function atualizarDuracao(indice, duracao) {
     tarefas[indice].duracao = parseInt(duracao);
 
-    
+// Atualiza a exibição das tarefas na página
+function atualizarTarefas() {
+    listaTarefas.innerHTML = `
+        <table>
+            <tr>
+                <th>Descrição</th>
+                <th>Autor</th>
+                <th>Departamento</th>
+                <th>Importância</th>
+                <th>Realizada</th>
+                <th>Duração</th>
+                <th>Remover</th>
+            </tr>
+            ${tarefas.map((tarefa, indice) => `
+                <tr>
+                    <td>${tarefa.descricao}</td>
+                    <td>${tarefa.autor}</td>
+                    <td>${tarefa.departamento}</td>
+                    <td>${tarefa.importancia}</td>
+                    <td><input type="checkbox" onchange="alternarPago(${indice}, this.checked)" ${tarefa.paga ? 'checked' : ''}></td>
+                    <td><input type="number" value="${tarefa.duracao}" onchange="atualizarDuracao(${indice}, this.value)"></td>
+                    <td><button onclick="removerTarefa(${indice})">X</button></td>
+                </tr>
+            `).join('')}
+        </table>
+    `;
+}
+
+// Inicializa a exibição das tarefas
+atualizarTarefas();
