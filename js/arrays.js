@@ -27,3 +27,9 @@ function removerTarefa(indice) {
     tarefas.splice(indice, 1);
     atualizarTarefas();
 }
+
+// Atualiza a duração de uma tarefa
+function atualizarDuracao(indice, duracao) {
+    tarefas[indice].duracao = parseInt(duracao);
+
+    
