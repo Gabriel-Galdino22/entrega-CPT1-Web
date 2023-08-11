@@ -11,13 +11,8 @@ const tarefas = [];
 
 // Adiciona uma nova tarefa ao array de tarefas
 function adicionarTarefa(descricao, autor, departamento, importancia) {
-    const tarefa = {
-        descricao: descricao,
-        autor: autor,
-        departamento: departamento,
-        importancia: importancia,
-        realizada: false,
-        duracao: 0
+    const tarefa = {descricao: descricao, autor: autor, departamento: departamento, importancia: importancia,
+        realizada: false, duracao: 0
     };
     tarefas.push(tarefa);
     atualizarTarefas();
