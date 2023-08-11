@@ -5,3 +5,5 @@ const campoAutorTarefa = document.getElementById('taskAuthor');
 const campoDepartamentoTarefa = document.getElementById('taskDepartment');
 const campoImportanciaTarefa = document.getElementById('taskImportance');
 const listaTarefas = document.getElementById('listaTarefas');
+
+const tarefas = [];
