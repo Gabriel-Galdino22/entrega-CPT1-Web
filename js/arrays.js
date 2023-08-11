@@ -21,3 +21,9 @@ function adicionarTarefa(descricao, autor, departamento, importancia) {
     tarefas.push(tarefa);
     atualizarTarefas();
 }
+
+// Remove uma tarefa do array de tarefas
+function removerTarefa(indice) {
+    tarefas.splice(indice, 1);
+    atualizarTarefas();
+}
