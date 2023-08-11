@@ -37,3 +37,27 @@ h2 {
     cursor: pointer;
 }
 
+/* Criando estilo para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
