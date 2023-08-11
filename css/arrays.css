@@ -80,3 +80,8 @@ input[type="checkbox"] {
     cursor: pointer;
 }
 
+/* Criando estilo para a opção duração */
+input[type="number"] {
+    width: 40px;
+    text-align: center;
+}
