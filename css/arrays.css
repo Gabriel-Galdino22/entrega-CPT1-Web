@@ -5,3 +5,12 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Criando estilo para o cabeçalho da página */
+h2 {
+    margin: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
