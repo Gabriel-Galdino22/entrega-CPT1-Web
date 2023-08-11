@@ -58,7 +58,7 @@ function atualizarTarefas() {
                     <td>${tarefa.autor}</td>
                     <td>${tarefa.departamento}</td>
                     <td>${tarefa.importancia}</td>
-                    <td><input type="checkbox" onchange="alternarPago(${indice}, this.checked)" ${tarefa.paga ? 'checked' : ''}></td>
+                    <td><input type="checkbox" onchange="alternarRealizado(${indice}, this.checked)" ${tarefa.realizada ? 'checked' : ''}></td>
                     <td><input type="number" value="${tarefa.duracao}" onchange="atualizarDuracao(${indice}, this.value)"></td>
                     <td><button onclick="removerTarefa(${indice})">X</button></td>
                 </tr>
