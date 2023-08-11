@@ -7,19 +7,28 @@
     <title>Gabriel Galdino - rm550711</title>
 </head>
 <body>
-    <h2>Gabriel Galdino - rm550711</h2>
-    <!-- Formulário utilizado para adicionar as tarefas e seus atributos -->
     <form id="taskForm">
-        <input type="text" id="taskDescription" placeholder="Descrição">
-        <input type="text" id="taskAuthor" placeholder="Autor">
-        <input type="text" id="taskDepartment" placeholder="Departamento">
-        <input type="text" id="taskImportance" placeholder="Importância">
-        <button type="button" onclick="adicionarTarefaComAtributos()">Adicionar uma Tarefa</button>
+        <label for="taskDescription">Descrição:</label>
+        <input type="text" id="taskDescription" required>
+        <br>
+        <label for="taskAuthor">Autor:</label>
+        <input type="text" id="taskAuthor" required>
+        <br>
+        <label for="taskDepartment">Departamento:</label>
+        <input type="text" id="taskDepartment" required>
+        <br>
+        <label for="taskImportance">Importância:</label>
+        <select id="taskImportance" required>
+            <option value="alta">Alta</option>
+            <option value="media">Média</option>
+            <option value="baixa">Baixa</option>
+        </select>
+        <br>
+        <button type="submit">Adicionar Tarefa</button>
     </form>
-    <!-- Utilizando a Div para mostrar a lista de tarefas -->
+
     <div id="listaTarefas"></div>
 
-    <!-- Puxando o código da página arrays.js -->
-    <script src="./js/arrays.js" defer></script>
+    <script>    </script>
 </body>
 </html>
